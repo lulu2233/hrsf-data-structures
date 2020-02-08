@@ -12,7 +12,7 @@ var Stack = function() {
     storage[++count] = value;  
   };
 
-  someInstance.pop = function() {
+  someInstance.pop = function() {  ,
     if (count === 0) {
       return null;
     }
