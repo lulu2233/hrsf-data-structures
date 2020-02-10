@@ -13,20 +13,18 @@ var bstreeMethods = {
   
   if (value > this.value) {
     if (this.right === null) {
-      var rightTree = BinarySearchTree(value);
+      this.right = BinarySearchTree(value);
     } else {
-      var rightTree = this.right.insert(value);
+      this.right.insert(value);
     }
-    this.right = rightTree;
   } else {
     if (this.left === null) {
-      var leftTree = BinarySearchTree(value);
+      this.left = BinarySearchTree(value);
     } else {
-      var leftTree = this.left.insert(value);
+      this.left.insert(value);
     }
-    this.left = leftTree;
   }
-  return this;
+  
   },
 
   contains : function(value) {
